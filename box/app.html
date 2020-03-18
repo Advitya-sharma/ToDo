@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        var id = 0;
+
+        function addx(){
+            var li = document.createElement('li');
+            var text = document.createTextNode(document.getElementById("input").value);
+            li.appendChild(text);
+            var x = document.getElementById("list").appendChild(li);
+            //x.setAttribute('id', id);
+           // id++;
+        }
+        function cardx(){
+            var div = document.createElement("div");
+            div.setAttribute('class', "cd");
+            div.innerHTML = "<i>name</i>"
+            div.style.padding = "50px 10px 20px 30px"
+            document.body.appendChild(div);
+           
+        }
+        function removex(){
+            var li = document.getElementById("list");
+           
+            list.remove
+        }
+    </script>
+
+
+
+</head>
+
+<body>
+
+<form action="">
+    <input id="input">
+    <input type="button" onclick="addx()" value="add to todo" >
+    <input type="button" onclick="cardx()" value="add card" >
+</form>
+
+<ul id="list">
+
+</ul>   
+
+</body>
+</html>
