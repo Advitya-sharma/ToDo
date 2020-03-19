@@ -14,13 +14,14 @@
             //x.setAttribute('id', id);
            // id++;
         }
+        var idx = 10
         function cardx(){
             var div = document.createElement("div");
             div.setAttribute('class', "cd");
             div.innerHTML = "<i>name</i>"
-            div.style.padding = "50px 10px 20px 30px"
+            div.style.marginLeft = idx+"px";
             document.body.appendChild(div);
-           
+           idx += 350; 
         }
         function removex(){
             var li = document.getElementById("list");
