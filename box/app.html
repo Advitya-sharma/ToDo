@@ -1,50 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Document</title>
+    <title>To-do</title>
     <link rel="stylesheet" href="style.css">
     <script>
         var id = 0;
 
-        function addx(){
-            var li = document.createElement('li');
-            var text = document.createTextNode(document.getElementById("input").value);
-            li.appendChild(text);
-            var x = document.getElementById("list").appendChild(li);
-            //x.setAttribute('id', id);
-           // id++;
+        function limitx(clx){
+            var text = document.getElementById(clx).value;
+            if(text.length >40){
+                alert("limit reached");
+            }
         }
+
         var idx = 10
         function cardx(){
             var div = document.createElement("div");
             div.setAttribute('class', "cd");
-            div.innerHTML = "<i>name</i>"
+            div.setAttribute('id', id);
+            var nx = "head";
+            div.innerHTML = '<input type="text" id="head" onkeyup="limitx(\'head\')"> <hr>';
             div.style.marginLeft = idx+"px";
             document.body.appendChild(div);
            idx += 350; 
+           id +=1;
         }
-        function removex(){
-            var li = document.getElementById("list");
-           
-            list.remove
-        }
+
     </script>
-
-
 
 </head>
 
 <body>
 
 <form action="">
-    <input id="input">
-    <input type="button" onclick="addx()" value="add to todo" >
-    <input type="button" onclick="cardx()" value="add card" >
+    <input type="button" onclick="cardx()" value="add card" maxlength="40">
 </form>
-
-<ul id="list">
-
-</ul>   
 
 </body>
 </html>
