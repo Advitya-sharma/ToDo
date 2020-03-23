@@ -21,10 +21,29 @@
             var nx = "head";
             div.innerHTML = '<input type="text" id="head" onkeyup="limitx(\'head\')"> <hr>';
             div.style.marginLeft = idx+"px";
-            document.body.appendChild(div);
+            document.body.appendChild(div);     
+
+            var button = document.createElement("button");
+            button.innerHTML = 'box';
+            button.setAttribute('onclick','textBox()');
+            button.setAttribute('id', 'bx');
+            button.setAttribute('valign', 'bottom');
+            div.appendChild(button);
+
            idx += 350; 
            id +=1;
         }
+        wid = 100;
+
+    function textBox(){
+        var div  = document.getElementById("0");
+        var textb = document.createElement("textarea");
+        textb.setAttribute('placeholder','enter your text...');
+        textb.setAttribute('style',"overflow: hidden; overflow-wrap: break-word; resize: none;height:auto;");
+        div.appendChild(textb);
+        div.style.height = wid +'px';
+        wid +=40;
+    }
 
     </script>
 

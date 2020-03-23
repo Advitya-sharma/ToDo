@@ -1,12 +1,14 @@
 
 .cd{
-    border-radius: 10px;
+   
     height: 100px;
-    width: 300px;
+    width: 200px;
     background-color: blueviolet;
     position: absolute;
     display: block;
     }
-.cd.head{
     
+#bx{
+        float: bottom;
+        bottom: 0px;
 }
