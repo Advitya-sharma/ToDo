@@ -6,9 +6,23 @@
     background-color: blueviolet;
     position: absolute;
     display: block;
+   
+   /* Alternate way 
+   
+   display:flex;
+   flex-direction:column;
+   
+   
+   */
     }
     
 #bx{
-        float: bottom;
+   /* if using display flex in parent div
+   
+   order:1;
+   margin:auto;
+   */
+        position:absolute;
         bottom: 0px;
+        width:4rem;
 }
